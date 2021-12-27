@@ -6,6 +6,7 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import Image from '@/components/Image'
 
 const LayoutWrapper = ({ children }) => {
   return (
@@ -16,7 +17,14 @@ const LayoutWrapper = ({ children }) => {
             <Link href="/" aria-label="Tailwind CSS Blog">
               <div className="flex items-center justify-between">
                 <div className="mr-3">
-                  <Logo />
+                  <Image
+                    src={'/static/images/logo.png'}
+                    alt="logo"
+                    width="50px"
+                    height="50px"
+                    className="w-12 h-12"
+                    quality="100"
+                  />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
                   <div className="hidden h-6 text-2xl font-semibold sm:block">

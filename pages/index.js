@@ -4,6 +4,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
+import Image from '@/components/Image'
 
 import NewsletterForm from '@/components/NewsletterForm'
 
@@ -19,14 +20,35 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+      <div className="flex flex-col items-center my-6 xl:flex-row gap-x-12 xl:mb-12">
+        <div className="pt-6">
+          <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            Hi, I’m Manikam
+          </h1>
+          <h2 className="text-lg prose text-gray-600 dark:text-gray-400">
+            {`Welcome to my blog,
+                Humble web-dev now, digging into my past will have unintended consequences.`}
+          </h2>
+        </div>
+        <div className="flex items-center justify-center mx-2 my-12 w-96">
+          <Image
+            src={'/static/images/avatar.jpg'}
+            alt="avatar"
+            width="192px"
+            height="192px"
+            className="w-48 h-48 rounded-full object-fit"
+            quality="100"
+          />
+        </div>
+      </div>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Latest
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+          {/* <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             {siteMetadata.description}
-          </p>
+          </p> */}
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
@@ -91,11 +113,11 @@ export default function Home({ posts }) {
           </Link>
         </div>
       )}
-      {siteMetadata.newsletter.provider !== '' && (
+      {/* {siteMetadata.newsletter.provider !== '' && (
         <div className="flex items-center justify-center pt-4">
           <NewsletterForm />
         </div>
-      )}
+      )} */}
     </>
   )
 }

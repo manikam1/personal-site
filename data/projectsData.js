@@ -1,18 +1,26 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
+    title: 'Erumbu.one',
+    description: `Self Hosted - Community Forums`,
+    imgSrc: '/static/images/projects/erumbu.png',
     href: 'https://www.google.com',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
+    title: 'Erimalai.one',
+    description: `Flash Cards for Algorithms`,
+    imgSrc: '/static/images/projects/erimalai.png',
+    href: '/blog/the-time-machine',
+  },
+  {
+    title: 'Pachondhi.one',
+    description: `Multi vendor, E-Commernce PWA web app, React Native mobile app and Admin Panel`,
+    imgSrc: '/static/images/projects/pachondhi.png',
+    href: '/blog/the-time-machine',
+  },
+  {
+    title: 'Suravali.one',
+    description: `One Click - Resume generator.`,
+    imgSrc: '/static/images/projects/suravali.png',
     href: '/blog/the-time-machine',
   },
 ]
